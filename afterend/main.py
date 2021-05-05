@@ -32,6 +32,7 @@ async def index():
 async def add_message(message: MessageCreate):
     message_obj = models.Message(
         name=message.name,
+        phone=message.phone,
         body=message.body
     )
     session.add(message_obj)

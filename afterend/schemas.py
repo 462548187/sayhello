@@ -8,6 +8,7 @@ from typing import List
 
 class MessageBase(BaseModel):
     name: str = Body(..., min_length=2, max_length=8)
+    phone: str = Body(..., min_length=11, max_length=11)
     body: str = Body(..., min_length=1, max_length=200)
 
 

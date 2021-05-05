@@ -25,7 +25,7 @@ def test_get_message(skip, limit):
     assert response.json()['data'][0]["id"] == data[0]["id"]
 
 
-@pytest.mark.parametrize("data", [{"name": "七七", "body": "回踩!"}])
+@pytest.mark.parametrize("data", [{"name": "七七", "phone": "13817331916", "body": "回踩!"}])
 def test_add_message(data):
     response = client.post("/message", json=data)
     assert response.status_code == 200
