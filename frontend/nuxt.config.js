@@ -41,11 +41,15 @@ export default {
   ],
 
   axios: {
-    baseURL: 'http://127.0.0.1:8000'
+    baseURL: 'http://0.0.0.0:8000'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+  },
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0' // default: localhost
   }
 }
